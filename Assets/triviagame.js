@@ -71,7 +71,8 @@ $(document).ready(function () {
                     $(".q3_container").hide();
                     $(".score_container").show();
 
-                    
+                    //I think the easy way would be to have this bring you back to the start button.
+                    //The commands are there and I have a hunch that it'll reset itself
                 })
 
             })
@@ -84,3 +85,7 @@ $(document).ready(function () {
 
     //Ending function for doc.ready
 })
+//Want the timer to show up
+//IF you feel ambitious get that timer to reset for every question
+//store the answers and have an on click function that will add up the rights and wrongs.
+//bring back to start again.
