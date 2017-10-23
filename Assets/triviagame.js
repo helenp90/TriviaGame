@@ -1,6 +1,6 @@
 // SETTING  Global variables
 
-var timeCounter = 30;
+var timeCounter = 60;
 
 var rightAnswers = 0;
 
@@ -8,11 +8,17 @@ var wrongAnswers = 0;
 
 //With the timer function
 
-
-
-
-
-
+function timer() {
+    timeCounter++;
+    let interval = setInterval(function () {
+        timeCounter--;
+        if (timeCounter < 0) {
+            clearInterval(interval);
+            return;
+        }
+        console.log(timeCounter);
+    }, 1000)
+}
 
 
 $(document).ready(function () {
@@ -26,12 +32,16 @@ $(document).ready(function () {
     $(".q3_container").hide();
 
     $("#startButton").on("click", function () {
+        //calling the timer
+        timer();
         //Q1
         //On click start triggers the timer
 
         $("#startcontainer").hide();
         $(".timer_container").show();
         $(".q1_container").show();
+
+        //If Statement
 
 
         $(".btn").on("click", function () {
@@ -41,12 +51,16 @@ $(document).ready(function () {
             $(".q1_container").hide();
             $(".q2_container").show();
 
+            //IF Statement.
+
             $(".btn").on("click", function () {
                 //Q3
                 //On click resets the timer
 
                 $(".q2_container").hide();
                 $(".q3_container").show();
+
+                //If Statement
 
                 $(".btn").on("click", function () {
                     //score_container
