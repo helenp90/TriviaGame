@@ -1,6 +1,6 @@
 // SETTING  Global variables
 
-var counter = 15;
+var timeCounter = 30;
 
 var rightAnswers = 0;
 
@@ -11,13 +11,15 @@ $(document).ready(function () {
             //initialize the game with hidden divs.    
             $(".timer_container").hide();
             $(".score_container").hide();
-            $(".game_container").hide();
+            $(".q1_container").hide();
+            $(".q2_container").hide();
 
             $("#startButton").on("click", function () {
 
-                $(".timer_container").show();
-                $(".game_container").show();
                 $("#startcontainer").hide();
+                $(".timer_container").show();
+                $(".q1_container").show();
+                $(".q2_container").hide();
 
             })
         
