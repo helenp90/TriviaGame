@@ -13,6 +13,7 @@ $(document).ready(function () {
             $(".score_container").hide();
             $(".q1_container").hide();
             $(".q2_container").hide();
+            $(".q3_container").hide();
 
             $("#startButton").on("click", function () {
 
@@ -20,7 +21,7 @@ $(document).ready(function () {
                 $(".timer_container").show();
                 $(".q1_container").show();
                 $(".q2_container").hide();
-
+                $(".q3_container").hide();
             })
         
         
